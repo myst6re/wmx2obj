@@ -87,7 +87,7 @@ static bool handle_segments(const struct config *cfg, FILE *in_fp, FILE *out_fp)
     if (err)
         fprintf(stderr, "Error locating starting segment in file.\n");
 
-    for (int i = cfg->start_segment_idx; !err && i <= cfg->end_segment_idx; ++i)
+    for (int i = cfg->start_segment_idx; i <= cfg->end_segment_idx; ++i)
     {
         err = (buf = malloc(SEGMENT_BYTE_CNT)) == NULL;
         if (err)
