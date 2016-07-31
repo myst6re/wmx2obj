@@ -43,7 +43,7 @@ exit_program:
     if (err)
         fprintf(stderr, "Errors occurred during execution.\n");
 
-    return 0;
+    return err ? 1 : 0;
 }
 
 static bool convert_to_obj(const struct config *cfg)
